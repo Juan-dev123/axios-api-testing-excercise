@@ -36,14 +36,8 @@ describe('First Api Tests', () => {
         expect(JSON.parse(response.data.data)).to.eql(body);
     });
 
-    it('Consume DELETE Service with query params', async () => {
-        const query = {
-            name: 'John',
-            age: '31',
-            city: 'New York'
-        };
-        
-        const response = await axios.delete('https://httpbin.org/delete', {query});
+    it('Consume DELETE Service', async () => {
+        const response = await axios.delete('https://httpbin.org/delete');
         
         expect(response.status).to.equal(StatusCodes.OK);
     });
