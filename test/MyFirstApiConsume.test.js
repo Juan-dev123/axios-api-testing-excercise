@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const axios = require('axios');
 const { expect } = require('chai');
 const { StatusCodes } = require('http-status-codes');
